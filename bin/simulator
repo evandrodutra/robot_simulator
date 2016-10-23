@@ -1,0 +1,2 @@
+#!/bin/sh
+ruby lib/robot_simulator.rb "$1"
