@@ -19,6 +19,7 @@
 
 require_relative '../lib/simulator/table.rb'
 require_relative '../lib/simulator/robot.rb'
+require_relative '../lib/simulator/command_parser.rb'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
