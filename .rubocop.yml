@@ -1,0 +1,60 @@
+CollectionMethods:
+  PreferredMethods:
+    find: detect
+    reduce: inject
+    collect: map
+    find_all: select
+
+EndAlignment:
+  AlignWith: variable
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/LineLength:
+  Max: 85
+
+Metrics/MethodLength:
+  Max: 40
+
+Style/AlignParameters:
+  Enabled: true
+
+Style/ClassVars:
+  Enabled: true
+
+Style/ClosingParenthesisIndentation:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/IndentArray:
+  EnforcedStyle: consistent
+
+Style/Lambda:
+  Enabled: true
+
+Style/FileName:
+  Enabled: true
+
+Style/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Style/SignalException:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/LambdaCall:
+  EnforcedStyle: call
