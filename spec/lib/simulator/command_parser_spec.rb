@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CommandParser do
-  let(:command) { Class.new.extend(CommandParser) }
+  let(:command) { CommandParser.new }
   let(:valid_commands) { ["PLACE 4,4,SOUTH\n", "REPORT\n", "MOVE\n", "RIGHT\n", "LEFT\n"] }
   let(:invalid_commands) { valid_commands + ["PLACE 2,2,NORTHWEST\n", "REPORT\n", "JUMP\n"] }
 

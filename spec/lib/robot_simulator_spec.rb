@@ -7,6 +7,6 @@ describe 'RobotSimulator' do
     allow(File).to receive(:exist?).with('commands.txt').and_return(true)
     allow(File).to receive(:readlines).with('commands.txt').and_return(commands)
 
-    expect { run('commands.txt') }.to output("Output: 4,3,WEST\n").to_stdout
+    expect { Client.new('commands.txt').run }.to output("Output: 4,3,WEST\n").to_stdout
   end
 end

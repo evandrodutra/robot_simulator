@@ -1,17 +1,17 @@
 class Interpreter
-  include CommandParser
-
   attr_reader :commands
 
   def initialize(path)
     @path = path
-    @commands = read_commands!
+    @commands = []
   end
 
-  def read_commands!
+  def read!
     return [] unless File.exist?(@path)
 
     lines = File.readlines(@path)
-    @commands = load(lines)
+    command_parser = CommandParser.new
+
+    @commands = command_parser.load(lines)
   end
 end

@@ -11,7 +11,7 @@ describe Robot do
     expect(Robot::MOVES).to eq(north: [0, 1], south: [0, -1], east: [1, 0], west: [-1, 0])
   end
 
-  context '#placed' do
+  context 'placed' do
     let(:placed_robot) do
       robot.place!(1, 1, :north)
       robot
@@ -63,7 +63,7 @@ describe Robot do
     end
   end
 
-  context '#unplaced' do
+  context 'unplaced' do
     it 'must be false' do
       expect(robot.placed?).to be_falsey
     end

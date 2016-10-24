@@ -1,4 +1,4 @@
-module CommandParser
+class CommandParser
   def parse(cmd)
     case cmd.chomp
     when /^PLACE\s(\d+,){2}(NORTH|SOUTH|EAST|WEST)$/i

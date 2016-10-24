@@ -9,7 +9,7 @@ describe Simulator do
     expect(simulator.robot.placed?).to be_falsey
   end
 
-  context '#commands' do
+  context '#execute' do
     let(:placed_robot) do
       robot = Robot.new
       robot.place!(1, 1, :north)
@@ -67,7 +67,7 @@ describe Simulator do
     end
   end
 
-  context '#robot not placed' do
+  context '#execute - robot not placed' do
     it 'ignores MOVE command' do
       simulator.execute(type: :move)
 
@@ -85,8 +85,8 @@ describe Simulator do
     end
   end
 
-  context '#command list' do
-    let(:parser) { Class.new.extend(CommandParser) }
+  context 'commands list' do
+    let(:parser) { CommandParser.new }
     let(:commands) { parser.load(["MOVE\n", "MOVE\n", "PLACE 0,0,NORTH\n", "MOVE\n", "RIGHT\n", "MOVE\n", "LEFT\n", "MOVE\n"]) }
 
     it 'ignores commands until a valid PLACE command' do

@@ -13,7 +13,7 @@ describe Interpreter do
 
     interpreter = Interpreter.new('invalid-file.txt')
 
-    expect(interpreter.read_commands!).to eq([])
+    expect(interpreter.read!).to eq([])
   end
 
   it 'returns valid commands' do
@@ -21,6 +21,7 @@ describe Interpreter do
     allow(File).to receive(:readlines).with('valid-commands.txt').and_return(valid_commands)
 
     valid_interpreter = Interpreter.new('valid-commands.txt')
+    valid_interpreter.read!
 
     expect(valid_interpreter.commands).to eq(desired_commands)
   end
@@ -30,6 +31,7 @@ describe Interpreter do
     allow(File).to receive(:readlines).with('invalid-commands.txt').and_return(invalid_commands)
 
     invalid_interpreter = Interpreter.new('invalid-commands.txt')
+    invalid_interpreter.read!
     commands = desired_commands << { type: :report }
 
     expect(invalid_interpreter.commands).to eq(commands)
