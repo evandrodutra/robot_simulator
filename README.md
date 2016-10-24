@@ -1,4 +1,5 @@
 # Toy Robot Simulator
+[![CircleCI](https://circleci.com/gh/evandrodutra/robot_simulator.svg?style=svg)](https://circleci.com/gh/evandrodutra/robot_simulator) [![Code Climate](https://codeclimate.com/github/evandrodutra/robot_simulator/badges/gpa.svg)](https://codeclimate.com/github/evandrodutra/robot_simulator) [![Test Coverage](https://codeclimate.com/github/evandrodutra/robot_simulator/badges/coverage.svg)](https://codeclimate.com/github/evandrodutra/robot_simulator/coverage)
 
 ## Description
 
